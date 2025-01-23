@@ -1,0 +1,94 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 350px;
+  transition: all 0.3s ease;
+}
+
+.App h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.App p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #357ab7;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+button:focus {
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .App {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .App h1 {
+    font-size: 2rem;
+  }
+
+  .App p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
